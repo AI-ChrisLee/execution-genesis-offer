@@ -73,12 +73,6 @@ transcript itself as a `.vtt` once cloud recording and the audio transcript are 
 one time. No Zoom Pro: take the call on Cal Video or Google Meet and record it on the phone
 beside you, then hand that file over like any other.
 
-## Nothing recorded
-
-Every quote is the founder's memory, labeled `(founder's recollection · Name · date)`. The
-document still rebuilds from it, every quote carrying that label, and the next call gets
-recorded.
-
 ## File types
 
 Transcripts: `.txt`, `.md`, `.srt`, `.vtt`. Recordings: `.m4a`, `.mp3`, `.wav`, `.mp4`, `.mov`.

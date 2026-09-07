@@ -5,12 +5,6 @@
       "command": "npx",
       "args": ["-y", "@apify/actors-mcp-server"],
       "env": { "APIFY_TOKEN": "PASTE_YOUR_APIFY_TOKEN" }
-    },
-    "perplexity": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "perplexity-mcp"],
-      "env": { "PERPLEXITY_API_KEY": "PASTE_YOUR_PERPLEXITY_KEY" }
     }
   }
 }

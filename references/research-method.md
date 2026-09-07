@@ -4,17 +4,13 @@ Two passes, in this order. State the reason for each before running it.
 
 ## Which mode this run is in
 
-C1 of the run checks the 2 tools by probing one each. Apify is the optional wiring at the
-end of the Winning Offer lesson's Step 1, so a run arrives with it live or not; Perplexity is
-optional and no lesson wires it. A tool that errors on auth counts as NOT wired. Say so, print unwired mode on the
-document, and run the ladder below.
-
-What unwired costs, in one line: Reddit. `reddit.com` is blocked for the built-in fetch and
-for the built-in search, so an unwired run returns zero Reddit results in every niche, and
-Reddit is where this buyer's pain arrives in full sentences. Say that at the gate, before
-the founder decides, never after the document prints. A founder who wants it wired pastes their token ("Here is my Apify token: ____. Use it for
-the Winning Offer.") and the skill writes the wiring itself, in a turn of its own; this run
-does not stop for it.
+Wired means the Apify tools are loaded in this session: the founder pasted the token (g5)
+and reopened Claude Code. Nothing is probed. Not loaded: C1 says one sentence, "Reddit and
+YouTube comments are out until a token is pasted; everything else is read", the mode line
+prints `unwired ladder`, and the run walks the unwired ladder below. An auth error on the
+first call is one line, and the run walks the unwired ladder from there. A founder who wants
+it wired pastes their token ("Here is my Apify token: ____. Use it for the Winning Offer.")
+and the skill writes the wiring itself, in a turn of its own; this run does not stop for it.
 
 ## Pass 1 · The buyer's own language
 
@@ -73,7 +69,7 @@ buyer watches (wired, rung 2 of the wired ladder, and the reason wiring matters 
 this market), and the public archives WebFetch reaches, a Discord or Skool community's
 public channels, a newsletter's web archive, a podcast's show notes and its comment
 section. Unwired, say it plainly: **this is a founder-ask market by default**, same as the
-paragraph below, and make the ask in the same message as the wiring.
+paragraph below; the inbox lines asked for at C1, with the yes, are that ask.
 
 **Local-service buyers (engaged couples, homeowners, patients, local business owners).**
 The review sites this file used to name are closed: Yelp and WeddingWire answer 403, The
@@ -81,7 +77,7 @@ Knot answers 403 and then times out. And open, they would still not do the job. 
 five-star vendor review carries outcome words and nothing else, no pain and no objection,
 because nobody writes a complaint under a photo of their wedding. So the rule for these
 markets: **pains and objections come from the founder ask by default, not as a fallback.**
-Make that ask in the same message as the wiring, before Pass 1 runs. What does open, and
+The inbox lines asked for at C1, with the yes, are that ask. What does open, and
 what each one is for: a buyer forum for the occasion (rung 4), pains and objections;
 Trustpilot pages for the marketplaces this buyer hires through, Thumbtack, Angi,
 HomeAdvisor (rung 1), pains and objections about the hiring itself; the operators' own
@@ -108,19 +104,17 @@ Rules for this pass, learned the hard way:
 - **A rung that returns ZERO results** (open, just nothing there) is said out loud and the
   ladder moves down. A niche with no public trace is a note on the document, and fabricating
   quotes to fill the section is the worst failure this skill can commit.
-- **Ask the founder for their own buyer language whenever the public record comes back
-  thin.** This is a standing rung, not an exception: the moment PUBLIC quotes total under
-  about five, ask them to paste 5-10 real quotes from their own inbox, DMs, or group. A
-  public quote is one whose source label is neither a warm call nor the founder, so the
-  quotes this ask returns are founder-sourced: they are real buyer language, they go into
-  `## BUYER LANGUAGE` labeled `(founder's inbox ...)`, and they never move the count,
-  because the count measures the PUBLIC record and nothing else. The founder always has
-  buyer language; the internet sometimes does not. A login-gated buyer room (private
-  Facebook groups, member forums) is one case of this, and the ask is the same one. Never
-  invent a community to justify asking. Under five public quotes after the ask, the document's
-  mode line says "the market read is thin here" in plain words instead of building a
-  confident pain list on air. That flag never touches THE STACK's fear column, which runs
-  on the source ladder in `card-template.md`.
+- **The founder's own buyer language is asked for once, at C1 with the yes:** 5-10 real
+  lines from their inbox, DMs or group, "skip if you have none". This pass never stops to
+  ask again. A public quote is one whose source label is neither a warm call nor the
+  founder, so the lines that ask returns are founder-sourced: they are real buyer language,
+  they go into `## BUYER LANGUAGE` labeled `(founder's inbox ...)`, and they never move the
+  count, because the count measures the PUBLIC record and nothing else. The founder always
+  has buyer language; the internet sometimes does not. A login-gated buyer room (private
+  Facebook groups, member forums) is one case of this, and those lines cover it. Never
+  invent a community. Under five public quotes, the document's mode line says `thin` instead
+  of building a confident pain list on air. That flag never touches THE STACK's fear column,
+  which runs on the source ladder in `card-template.md`.
 - Never invent a quote; keep the source next to every quote. If real buyer language truly
   cannot be found anywhere, say so plainly; a buyer who talks nowhere is itself a market
   warning.
@@ -130,9 +124,9 @@ Rules for this pass, learned the hard way:
 Reason to state: "Whether this niche holds is a data question, and today the data is what
 the market already shows."
 
-Three questions, real numbers only; drop anything you cannot verify. Run this pass on the
-wired tools (Apify for operator pages and pricing, Perplexity for the direction read);
-the built-in search is the fallback, under the same honesty rules as Pass 1.
+Three questions, real numbers only; drop anything you cannot verify. Run this pass on Apify
+when it is wired (operator pages and pricing); the built-in search is the fallback, under the
+same honesty rules as Pass 1.
 
 1. **Who sells to this buyer now?** First name the market's edge: a local business
    competes in its city or metro; everyone else, name the comparable market before
@@ -179,10 +173,10 @@ the built-in search is the fallback, under the same honesty rules as Pass 1.
 
 ## Output: the headings, by exact string
 
-One research note at `squad/offer-research.md`, readable in five minutes. Every heading
-below is written by exact string, every run, and two of them are load-bearing outside this
-run: `## BUYER LANGUAGE` (compiled from `squad/clients/*/notes.md` on every run, nobody else writes
-it, the Winning Scrape reads it) and `## CHANNEL BASELINES` (the Winning Scrape starts its medians from it). A drifted
+One research note at `squad/offer-research.md`, written on a cold run only, readable in five
+minutes. Every heading below is written by exact string, every cold run, and two of them are
+load-bearing outside this run: `## BUYER LANGUAGE` (compiled from `squad/clients/*/notes.md`
+at C0, nobody else writes it, the Winning Scrape reads it) and `## CHANNEL BASELINES` (the Winning Scrape starts its medians from it). A drifted
 string there is a section that is gone. `## CHANNELS MINED`, `## DIRECTION` and
 `## EMPTY SEATS` are named in prose by the Winning Scrape, so they keep their strings too.
 The remaining four (`## ALLOWED WORDS`, `## OPERATORS`, `## SCORECARD`, `## ATTACK LOG`)
@@ -197,7 +191,7 @@ are this run's own receipts, read inside the run and by the founder afterward.
 | `## OPERATORS` | the operator table, bundle column included |
 | `## DIRECTION` | growing or decaying, with its receipts |
 | `## EMPTY SEATS` | the seat found, plus the two always tested |
-| `## SCORECARD` | the seven gates with receipts (appended at SCORE), gate 7 carrying the number chain and the window it covers |
+| `## SCORECARD` | the seven gates with receipts (appended at SCORE), gate 7 carrying the number chain |
 | `## ATTACK LOG` | the three self-attacks and the fix each forced (appended at ATTACK) |
 
 `## CHANNEL BASELINES` is written every run, without exception. When the niche is not a
