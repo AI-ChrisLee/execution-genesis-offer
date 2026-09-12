@@ -1,13 +1,12 @@
-# The Winning Offer
+# The Winning Offer: install in 60 seconds
 
-This skill is a base. Once you have done it your way, tell your squad "update the skill to do it like this."
+The offer part of an Execution Squad. Your calls, or the market, into one offer document at
+`squad/business.md`.
 
-Your calls, or the market, into one offer document at `squad/business.md`.
+**Install.** Open Claude Code in your company folder, the one g2 made, and paste: "Install
+this skill: https://github.com/AI-ChrisLee/the-winning-offer. Clone the whole folder into
+.claude/skills as the-winning-offer, without the .git folder." Say yes when it asks
+permission to download, then quit and reopen Claude Code once so it sees the new skill.
 
-**Install.** Open Claude Code in your company folder and paste:
-
-"Install this skill: https://github.com/AI-ChrisLee/the-winning-offer. Clone the whole folder into .claude/skills as the-winning-offer, without the .git folder."
-
-Quit and reopen Claude Code, type `/`, and check that `the-winning-offer` is on the list.
-
-The run is in the lessons: g4, the warm entry, and g5, the cold entry, at aichrislee.com.
+The run, the lines to say and what comes back are in the lessons: G4, the Winning Offer warm,
+and G5, the Winning Offer cold, at aichrislee.com.
