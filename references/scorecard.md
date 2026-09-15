@@ -59,7 +59,7 @@ effort. Each dial must become a PHRASE in the copy, not a score on a sheet:
 5. An empty seat exists
 6. The value equation, no numeric scores: name the STRONGEST dial and the WEAKEST dial,
    each with one receipt. (A 1-10 score with no rubric is an invented number, and this
-   skill bans invented numbers.)
+   agent bans invented numbers.)
 7. The number chain (how buyers currently reach them, stage by stage). Every stage (sent,
    replies, calls, money, plus views and clicks where a content lane exists) is ASKED for at
    the numbers gate, in one numbered message, never mid-SCORE. "I do not measure that" or

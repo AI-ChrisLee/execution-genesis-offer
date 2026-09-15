@@ -11,7 +11,7 @@ person. When the call ends, drop the file in `squad/interviews/`, named after th
 (`daniel.m4a`), and say: "/the-winning-offer I put my interview with Daniel in
 squad/interviews. Build the offer from it." It transcribes on the laptop.
 
-## How the squad transcribes (the skill runs this; the founder says yes once)
+## How the squad transcribes (the agent runs this; the founder says yes once)
 
 **The yes, asked only when `~/.squad/whisper` (`%USERPROFILE%\.squad\whisper` on Windows) is
 not there yet, in one line:** "I install a small transcriber on this laptop

@@ -11,10 +11,10 @@ scored through 7 gates and closed on one answer.
 **The first message of a fresh run** (no `squad/business.md`, no `squad/clients/`) carries this
 line, word for word:
 
-> This skill is a base. Once you have done it your way, tell your squad "update the skill to do
+> This agent is a base. Once you have done it your way, tell your squad "update the agent to do
 > it like this."
 
-`.claude/squad-roots.md` is the per-repo instance file every member-run skill reads first, in
+`.claude/squad-roots.md` is the per-repo instance file every member-run agent reads first, in
 any founder's repo, and its rows win over the `squad/` paths below, which are worked examples.
 A row reading "(none yet)" is unanswered, not an override.
 
@@ -26,11 +26,11 @@ A row reading "(none yet)" is unanswered, not an override.
 
 **First, 4 files next to this one must open:** `references/recording.md`,
 `references/card-template.md`, `references/scorecard.md`, `references/research-method.md`. Any
-missing: stop and say the skill folder was copied without its `references/`.
+missing: stop and say the agent folder was copied without its `references/`.
 
 ## The files
 
-1. `squad/business.md`: THE file, the offer document, read by every later skill. A cold run
+1. `squad/business.md`: THE file, the offer document, read by every later agent. A cold run
    writes `## THE FIVE ANSWERS` here first, then the document replaces the whole file.
 2. `squad/offer-research.md`, cold run only: the receipts, under the exact headings
    `references/research-method.md` names. `## BUYER LANGUAGE` is compiled from
@@ -117,7 +117,7 @@ the `confirmed` stamp stays the last line. A changed answer to question 2, a new
 every market heading in `squad/offer-research.md` and its `## SCORECARD`.
 
 **The wiring** runs alone, on the token paste. Write `.mcp.json` in the company folder from this
-skill's `mcp.json.example`, the token in place of the placeholder; an existing `.mcp.json` gets
+agent's `mcp.json.example`, the token in place of the placeholder; an existing `.mcp.json` gets
 the block merged in, nothing else touched. Never print the token back, never ask the founder to
 open or edit a file. Then one line: quit and reopen Claude Code here, and type
 `/the-winning-offer` again.
@@ -135,7 +135,7 @@ message; "I do not know" is an answer.
 `## SCORECARD` and the 3 self-attacks under `## ATTACK LOG`. Then write `squad/business.md`
 whole, in the shape of `references/card-template.md` (`## THE FIVE ANSWERS` and any warm
 document fold into WHO and THE MODEL). Never invent content so a heading can appear; later
-skills read these headings by name. The mode line and its stamp are that template's last
+agents read these headings by name. The mode line and its stamp are that template's last
 section. Gate 2 failing kills the run: no document, say so with the receipt, and ask for a buyer
 who has money.
 

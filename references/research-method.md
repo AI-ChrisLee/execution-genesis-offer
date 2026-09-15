@@ -10,7 +10,7 @@ YouTube comments are out until a token is pasted; everything else is read", the 
 prints `unwired ladder`, and the run walks the unwired ladder below. An auth error on the
 first call is one line, and the run walks the unwired ladder from there. A founder who wants
 it wired pastes their token ("Here is my Apify token: ____. Use it for the Winning Offer.")
-and the skill writes the wiring itself, in a turn of its own; this run does not stop for it.
+and the agent writes the wiring itself, in a turn of its own; this run does not stop for it.
 
 ## Pass 1 · The buyer's own language
 
@@ -103,7 +103,7 @@ Rules for this pass, learned the hard way:
   only paraphrases, cite the page title plus the paraphrase, marked as a paraphrase.
 - **A rung that returns ZERO results** (open, just nothing there) is said out loud and the
   ladder moves down. A niche with no public trace is a note on the document, and fabricating
-  quotes to fill the section is the worst failure this skill can commit.
+  quotes to fill the section is the worst failure this agent can commit.
 - **The founder's own buyer language is asked for once, at C1 with the yes:** 5-10 real
   lines from their inbox, DMs or group, "skip if you have none". This pass never stops to
   ask again. A public quote is one whose source label is neither a warm call nor the
@@ -151,7 +151,7 @@ same honesty rules as Pass 1.
    against the channel's own median of its last 10-20 uploads, the candidate video
    excluded, comparable long-form only, bought reach excluded, never views against
    subscriber count. **That window is the definition of record for the whole system.**
-   Later skills re-verify these numbers; they never recompute them on a different window.
+   Later agents re-verify these numbers; they never recompute them on a different window.
    Write the per-channel medians under `## CHANNEL BASELINES`.
    For local or service markets, make the same call from three reachable readings, each
    named in the file with its link: (a) the operator count, from searching the service
@@ -197,7 +197,7 @@ are this run's own receipts, read inside the run and by the founder afterward.
 `## CHANNEL BASELINES` is written every run, without exception. When the niche is not a
 content market, write the heading followed by "(none: <the market type this run actually
 found, local-service or remote-service or whichever>; the Winning Scrape sets the content
-lane cold)", so the next skill reads an intentional gap instead of a missing section.
+lane cold)", so the next agent reads an intentional gap instead of a missing section.
 
 Write Pass 1's findings to the file before Pass 2 starts, and Pass 2's before the model
 check; the file is the resume point, not the chat.
