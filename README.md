@@ -1,4 +1,4 @@
-# The Winning Offer
+# execution-genesis-offer
 
 This agent is a base. Once you have done it your way, tell your squad "update the agent to do it like this."
 
@@ -12,7 +12,7 @@ before you quit and reopen Claude Code.
 apify.com (no card, $5 of use free every month), copy your token from
 console.apify.com/settings/integrations, and tell Claude Code:
 
-"Here is my Apify token: ____. Use it for the winning offer."
+"Here is my Apify token: ____. Use it for execution genesis offer."
 
 Quit Claude Code, open it again in the same folder, choose to use the apify server when it asks, and
 say hi. Keep the token to yourself, like a password.

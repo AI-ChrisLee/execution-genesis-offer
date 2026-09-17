@@ -97,7 +97,7 @@ its own count, `$199 to $500 setup at 3 of 10, $109 to $500 a month at 6 of 10`.
 ## THE SHAPE
 
 1 of these 4, picked by the main thing the buyer receives. Every offer maps to exactly 1, and it
-decides what /the-demo builds.
+decides what /execution-genesis-demo builds.
 
 | Shape | The founder |
 |---|---|

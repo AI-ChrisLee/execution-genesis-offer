@@ -1,9 +1,9 @@
 ---
-name: the-winning-offer
-description: 'Use this when the founder needs their offer. They type "/the-winning-offer", say "run the winning offer", or paste "Here is my Apify token: ____. Use it for the winning offer." It asks 5 questions, finds who already sells to that buyer and for how much, digs up the words buyers use about the problem, and writes 1 page, squad/business.md. It never sends anything and never invents a quote.'
+name: execution-genesis-offer
+description: 'Use this when the founder needs their offer. They type "/execution-genesis-offer", say "run execution genesis offer", or paste "Here is my Apify token: ____. Use it for execution genesis offer." It asks 5 questions, finds who already sells to that buyer and for how much, digs up the words buyers use about the problem, and writes 1 page, squad/business.md. It never sends anything and never invents a quote.'
 ---
 
-# The Winning Offer
+# execution-genesis-offer
 
 1 output: `squad/business.md`, 1 page. 4 steps: the 5 questions, the sellers, the dig, the page.
 
@@ -38,7 +38,7 @@ This agent is a base. Once you have done it your way, tell your squad "update th
 ```
 
 The Apify tools are not loaded: add this line to the end of that same message.
-`I read Reddit and YouTube comments through Apify, and it is not connected yet. Make a free account at apify.com (no card, $5 of use free every month), copy your token from console.apify.com/settings/integrations, and paste it here like this: Here is my Apify token: ____. Use it for the winning offer.`
+`I read Reddit and YouTube comments through Apify, and it is not connected yet. Make a free account at apify.com (no card, $5 of use free every month), copy your token from console.apify.com/settings/integrations, and paste it here like this: Here is my Apify token: ____. Use it for execution genesis offer.`
 
 Answers 1, 2 and 5 all empty: ask 1 more thing, alone, and its answer is the buyer:
 `Name 1 kind of business or person you'd like to help.`
@@ -80,7 +80,7 @@ THE PROBLEM, THE PROMISE and BUYER WORDS stay empty under their headings until s
 ## 3. The dig
 
 The Apify tools (`fetch-actor-details`, `call-actor`, `apify--web-fetch`) are not loaded: send 1 line and wait.
-`The dig reads Reddit and YouTube comments through Apify. Paste: Here is my Apify token: ____. Use it for the winning offer.`
+`The dig reads Reddit and YouTube comments through Apify. Paste: Here is my Apify token: ____. Use it for execution genesis offer.`
 "Skip" means no dig: BUYER WORDS reads `None found. The dig was skipped.` and THE PROBLEM comes from
 the sellers' pages.
 
@@ -107,7 +107,7 @@ Saved: squad/business.md
 **<THE SENTENCE>**
 <PRICE line 1>
 <N> buyer quotes, from <where>. <K> of <M> sellers publish a price.
-Change any line by telling me what it should say. Next: /the-demo.
+Change any line by telling me what it should say. Next: /execution-genesis-demo.
 ```
 
 `<where>` names the sites the quotes came from, in the dig's order: `Reddit`, `Capterra`,
@@ -121,11 +121,11 @@ Skipped: `0 buyer quotes, the dig was skipped. <K> of <M> sellers publish a pric
 The founder names a line and what it should say: rewrite that line only, under the page law. PRICE
 line 1 stays in 1 of its 3 forms. THE PROMISE never promises a result. A BUYER WORDS line is removed, never reworded.
 A new THE SENTENCE writes the `product word` row again. Print the new line, then
-`Change any line by telling me what it should say. Next: /the-demo.`
+`Change any line by telling me what it should say. Next: /execution-genesis-demo.`
 
 ## The wiring
 
-On "Here is my Apify token: ____. Use it for the winning offer.":
+On "Here is my Apify token: ____. Use it for execution genesis offer.":
 
 1. Write `.mcp.json` in the folder Claude Code is open in, from `mcp.json.example` next to this
    file, with the token in place of `PASTE_YOUR_APIFY_TOKEN`. An existing `.mcp.json` gets the
@@ -136,7 +136,7 @@ On "Here is my Apify token: ____. Use it for the winning offer.":
 4. `npx -v` fails: send `Install Node from nodejs.org first (the LTS download).` before the last line.
 5. Send 1 line and stop:
    `Quit Claude Code, open it again in this folder, choose to use the apify server when it asks, then say hi.`
-   When you wrote the page first (3 above), the line ends `then type /the-winning-offer.` instead.
+   When you wrote the page first (3 above), the line ends `then type /execution-genesis-offer.` instead.
 
 Never print the token back. Never ask the founder to open or edit a file.
 
