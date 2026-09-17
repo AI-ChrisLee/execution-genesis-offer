@@ -2,12 +2,17 @@
 
 This agent is a base. Once you have done it your way, tell your squad "update the agent to do it like this."
 
-Your calls, or the market, into one offer document at `squad/business.md`.
+Agent 1. It asks you 5 questions, finds who already sells to your buyer and what they charge, digs up
+your buyer's own words, and writes your offer on 1 page: `squad/business.md`.
 
-**Install.** Open Claude Code in your company folder and paste:
+**Install.** Installed with the one line on aichrislee.com/free. Paste your Apify token line (below)
+before you quit and reopen Claude Code.
 
-"Install this agent: https://github.com/AI-ChrisLee/the-winning-offer. Clone the whole folder into .claude/skills as the-winning-offer, without the .git folder."
+**Apify, once.** The dig reads Reddit and YouTube comments through Apify. Make a free account at
+apify.com (no card, $5 of use free every month), copy your token from
+console.apify.com/settings/integrations, and tell Claude Code:
 
-Quit and reopen Claude Code, type `/`, and check that `the-winning-offer` is on the list.
+"Here is my Apify token: ____. Use it for the winning offer."
 
-The run is in the lessons: g4, the warm entry, and g5, the cold entry, at aichrislee.com.
+Quit Claude Code, open it again in the same folder, choose to use the apify server when it asks, and
+say hi. Keep the token to yourself, like a password.

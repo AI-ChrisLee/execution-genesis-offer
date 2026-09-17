@@ -1,203 +1,151 @@
 ---
 name: the-winning-offer
-description: Use this when the founder is building their offer, from people they already know or from the market. They say "/the-winning-offer I put my interview with <name> in squad/interviews. Build the offer from it." (the warm entry), "/the-winning-offer" (the cold entry; spoken, "run the Winning Offer"), or "Here is my Apify token: ____. Use it for the Winning Offer." (the optional wiring). Warm: each interview becomes a folder under squad/clients/ and rebuilds squad/business.md. Cold: 5 questions, then the market read. Both score 7 gates and end on one answer: this holds, or it fails a gate and why. It never sends, never prices past the founder's number, and never invents a quote.
+description: 'Use this when the founder needs their offer. They type "/the-winning-offer", say "run the winning offer", or paste "Here is my Apify token: ____. Use it for the winning offer." It asks 5 questions, finds who already sells to that buyer and for how much, digs up the words buyers use about the problem, and writes 1 page, squad/business.md. It never sends anything and never invents a quote.'
 ---
 
 # The Winning Offer
 
-Turn what buyers said, on a call or in public, into ONE offer document at `squad/business.md`,
-scored through 7 gates and closed on one answer.
+1 output: `squad/business.md`, 1 page. 4 steps: the 5 questions, the sellers, the dig, the page.
 
-**The first message of a fresh run** (no `squad/business.md`, no `squad/clients/`) carries this
-line, word for word:
+The first message of a fresh run (no `squad/business.md`) carries this line, once:
 
-> This agent is a base. Once you have done it your way, tell your squad "update the agent to do
-> it like this."
+> This agent is a base. Once you have done it your way, tell your squad "update the agent to do it like this."
 
-`.claude/squad-roots.md` is the per-repo instance file every member-run agent reads first, in
-any founder's repo, and its rows win over the `squad/` paths below, which are worked examples.
-A row reading "(none yet)" is unanswered, not an override.
+**Before anything.** Open `references/the-dig.md` and `references/the-page.md` next to this file.
+Either one missing: stop and say the agent folder was copied without its `references/`. Read the
+`founder name` row of `.claude/squad-roots.md`; "(none yet)" counts as empty.
 
-**The 3 lines the founder says:**
+**Resume.**
+- Continue at the first missing piece off disk: an empty BUYER WORDS is step 3, an empty THE PROBLEM or THE PROMISE is step 4.
+- Never re-run a paid dig that already wrote its lines: the sellers table and BUYER WORDS are the dig's raw finds, kept on the page, and there is no second file.
 
-- "/the-winning-offer I put my interview with <name> in squad/interviews. Build the offer from it." The warm run.
-- "/the-winning-offer" (spoken, "run the Winning Offer"). The cold run.
-- "Here is my Apify token: ____. Use it for the Winning Offer." The wiring.
+## 1. The 5 questions
 
-**First, 4 files next to this one must open:** `references/recording.md`,
-`references/card-template.md`, `references/scorecard.md`, `references/research-method.md`. Any
-missing: stop and say the agent folder was copied without its `references/`.
+No page on disk: send this as 1 message, word for word.
 
-## The files
+```text
+This agent is a base. Once you have done it your way, tell your squad "update the agent to do it like this."
 
-1. `squad/business.md`: THE file, the offer document, read by every later agent. A cold run
-   writes `## THE FIVE ANSWERS` here first, then the document replaces the whole file.
-2. `squad/offer-research.md`, cold run only: the receipts, under the exact headings
-   `references/research-method.md` names. `## BUYER LANGUAGE` is compiled from
-   `squad/clients/*/notes.md` first, and nobody else writes it. A warm run writes nothing here.
-3. `squad/clients/<first-last>/transcript.md` and `notes.md`, one per person. `transcript.md`'s
-   first line is `source: <file name> · <date>`, the only record a file was processed.
-4. `.claude/squad-roots.md`: the 6 rows in THE ROOTS, nothing else touched.
-5. `.mcp.json` in the company folder, on the wiring paste only.
-6. `~/.squad/whisper` (`%USERPROFILE%\.squad\whisper` on Windows), on a recording, on one yes.
+5 questions before I read anything online. Answer them in 1 message.
 
-`squad/interviews/` is the founder's folder. Read it, create it empty when missing, never
-write, rename or delete a file in it.
+1. What do you sell, in 1 sentence?
+2. Who buys it?
+3. What does it cost, and how do you deliver it?
+4. How did the people who paid you find you? If nobody has paid you yet, say "nobody yet".
+5. Is there something else you keep thinking you should sell instead?
 
-**Resuming.** Read `squad/interviews/`, `squad/clients/`, `squad/business.md` and
-`squad/offer-research.md` before asking anything, and continue at the first thing missing. A
-stamped document plus a new interview file is a rebuild, and the yes is asked again on the lines
-that changed. Never re-ask what the files answer, never re-run research on disk, never process a
-file twice.
+"Nothing yet" or "I don't know" is a real answer to any of them.
+```
 
-## The warm run
+The Apify tools are not loaded: add this line to the end of that same message.
+`I read Reddit and YouTube comments through Apify, and it is not connected yet. Make a free account at apify.com (no card, $5 of use free every month), copy your token from console.apify.com/settings/integrations, and paste it here like this: Here is my Apify token: ____. Use it for the winning offer.`
 
-**The interviews.** Every file in `squad/interviews/` that no `squad/clients/*/transcript.md`
-names on its first line is this run's work, oldest first, even when the founder named only one;
-say which you found. Any other file type is named in one line and skipped. The name is the file
-name (`daniel-kim.txt` is Daniel Kim); the date comes from the text, the founder's line, or the
-file. Ask "Who was this with?" only when the file name says nothing (`call-1.m4a`). Nothing
-unprocessed: ask for the recording or the transcript in `squad/interviews/`, named after the
-person, and wait. A recording is transcribed on the laptop the way `references/recording.md`
-says. Its one yes is asked only when `~/.squad/whisper` is missing; that folder is the record
-it was given. Never a paid service, nothing uploaded. Language is read, never asked. Quotes
-stay in the language they were said in; the notes and the document follow the roots file's
-voice sample.
+Answers 1, 2 and 5 all empty: ask 1 more thing, alone, and its answer is the buyer:
+`Name 1 kind of business or person you'd like to help.`
 
-**The folder.** `squad/clients/<first-last>/`, the name as the file names it, lowercased and
-hyphenated (a first name alone is the folder name). `transcript.md` opens with
-`source: <file name> · <date>`, then the text as it arrived; a transcript missing that line gets
-it added first. `notes.md` opens with `# Name · what they do · date` and holds these 7 headings,
-by exact string, in this order:
+A finished page on disk: skip the questions and send this, filled off the page.
 
-| Heading | Holds |
-|---|---|
-| `## QUOTES` | verbatim lines: a problem, a cost, a spend, an ask, a next step. Each labeled `(warm call · Name · date)` |
-| `## THE PROBLEM` | 3 at most, each pointing at its quote |
-| `## THE COST` | a number the text supports, or the question that gets it |
-| `## WHAT THEY PAY NOW` | a fact ("$400 a month on a VA"), or "unknown". Never a price |
-| `## THE IDEA` | what the founder would deliver to this person |
-| `## THE MODEL` | agency, consulting or software, and why in 6 words |
-| `## THE NEXT STEP` | the date they agreed to, or "none" |
+```text
+Your page says this. It came from your 5 answers and the sellers I read.
 
-Then one line, **Saved: `squad/clients/<first-last>/notes.md`**, and nothing of its contents.
+1. What you sell: <THE SENTENCE>
+2. Who buys it: <WHO line 1>
+3. What it costs and how you deliver it: <PRICE line 1> · <THE SHAPE>
+4. Where buyers find you: <WHO line 2>
+5. The other idea: <WHY THIS ONE>
 
-**The document.** Read every `squad/clients/*/notes.md` on disk and rebuild `squad/business.md`
-whole, in the shape of `references/card-template.md`, scored by `references/scorecard.md`.
-Every buyer-worded line comes off `## QUOTES`; when folders split on THE MODEL, the one the
-strongest quotes back wins. The document always prints. A cold run's market headings in
-`squad/offer-research.md` keep their receipts; only call-sourced sections are rewritten, and
-the mode line reads `cold · market + N calls`; `warm · N calls` prints only where no cold run
-has happened. Ask at most 2 things no call and no document answered, in one message: what you
-sell in one sentence, and the price. A price already on the document carries forward as it
-stands, and the yes is the confirm.
+Same, or what changed?
+```
 
-**The yes,** below, with one extra exit. Say the files processed back in one line first. **"One
-more call"** ends the run for tonight, the document stays unstamped, and the last line says to
-drop the next file in `squad/interviews/` and say the line again.
+- "Same": print step 4's lines and stop.
+- A new idea or a new buyer (answer 1, 2 or 5): run steps 2 to 4 again, and the new page replaces the old one whole.
+- A new price or delivery (answer 3): rewrite PRICE, THE SHAPE and THE PROMISE only.
+- A new answer 4: rewrite WHO line 2 only.
 
-## The cold run
+A `squad/business.md` in any other shape counts as no page.
 
-**The 5 questions.** Read every `squad/clients/*/notes.md` first, compile `## BUYER LANGUAGE` in
-`squad/offer-research.md` from them, and say back in one line how many calls, how many quotes,
-and what they never touched. Then ask, in one numbered message:
+## 2. The sellers
 
-1. What do you sell, in one sentence?
-2. Who buys it? (job title or situation, not demographics)
-3. What does it cost, and how does it get delivered?
-4. How did anyone who ever paid you find you? If nobody has, say so.
-5. Is there something different you keep thinking you SHOULD sell instead?
+Run part 1 of `references/the-dig.md`: up to 10 sellers for the idea in answer 1, and up to 10 for
+the idea in answer 5 when there is one, each read off the seller's own page. Pick the offer by the
+pick rule there, silently.
 
-Nobody has paid yet is an answer. In the same message, and only here, ask for 5 to 10 real lines
-from the founder's own inbox, DMs or group, "skip if you have none". A warm document already
-answers the first 3 (THE SENTENCE, WHO, PRICE and THE MODEL): restate each for a confirm or a
-correction, never the question again, and the same for `## THE FIVE ANSWERS` on disk. Write the
-answers into `squad/business.md` under `## THE FIVE ANSWERS`, directly above the mode line, so
-the `confirmed` stamp stays the last line. A changed answer to question 2, a new buyer, rewrites
-every market heading in `squad/offer-research.md` and its `## SCORECARD`.
+Fewer than 3 sellers with a published price anywhere: stop. No page. Send the 2 lines from
+`references/the-dig.md` and wait for a different buyer, then run this step again.
 
-**The wiring** runs alone, on the token paste. Write `.mcp.json` in the company folder from this
-agent's `mcp.json.example`, the token in place of the placeholder; an existing `.mcp.json` gets
-the block merged in, nothing else touched. Never print the token back, never ask the founder to
-open or edit a file. Then one line: quit and reopen Claude Code here, and type
-`/the-winning-offer` again.
+Otherwise write `squad/business.md` whole (no founder name: the title reads `# The offer · <YYYY-MM-DD>`), in the shape of `references/the-page.md`, with THE
+SENTENCE, WHO, WHAT HE PAYS NOW, THE SHAPE, PRICE, WHO ALREADY SELLS TO HIM and WHY THIS ONE filled.
+THE PROBLEM, THE PROMISE and BUYER WORDS stay empty under their headings until steps 3 and 4.
 
-**The read.** `references/research-method.md`, followed exactly, with one amendment: the calls
-already ran pass 1, so LISTEN fills the gaps they left, and scraped quotes go BELOW the warm
-ones under `## BUYER LANGUAGE`, each with its own source label. Apify tools not loaded this
-session: say one sentence first, "Reddit and YouTube comments are out until a token is pasted;
-everything else is read."
+## 3. The dig
 
-**The price,** below. Gate 7's number chain from `references/scorecard.md` goes in that same
-message; "I do not know" is an answer.
+The Apify tools (`fetch-actor-details`, `call-actor`, `apify--web-fetch`) are not loaded: send 1 line and wait.
+`The dig reads Reddit and YouTube comments through Apify. Paste: Here is my Apify token: ____. Use it for the winning offer.`
+"Skip" means no dig: BUYER WORDS reads `None found. The dig was skipped.` and THE PROBLEM comes from
+the sellers' pages.
 
-**The document.** Build, score and attack by `references/scorecard.md`, receipts under
-`## SCORECARD` and the 3 self-attacks under `## ATTACK LOG`. Then write `squad/business.md`
-whole, in the shape of `references/card-template.md` (`## THE FIVE ANSWERS` and any warm
-document fold into WHO and THE MODEL). Never invent content so a heading can appear; later
-agents read these headings by name. The mode line and its stamp are that template's last
-section. Gate 2 failing kills the run: no document, say so with the receipt, and ask for a buyer
-who has money.
+Run part 2 of `references/the-dig.md` for the chosen offer only: its cost line, then Reddit, reviews
+of what he pays for now, YouTube comments and public forums, until 10 quotes. Write BUYER WORDS to the
+page the moment the dig ends. Fewer than 5 quotes: go on with the ones you have, and step 4's print
+line says how many.
 
-## The price
+## 4. The page
 
-One number, never a range, and never a price, a tier or a cap the founder did not decide. For a
-service the ladder is $997, then $2,997, then $4,997.
+Fill THE PROBLEM and THE PROMISE. Add the places the quotes came from to WHO line 2. When a quote
+names the result the buyer wants, put it in THE SENTENCE. No result for THE SENTENCE or no day for
+THE PROMISE: ask its 1 line from `references/the-page.md` and wait, both lines in 1 message when both
+are missing. Then read the whole page against the law in `references/the-page.md` and fix every line
+that breaks it.
 
-Hold up ONE number: the price already on `squad/business.md`, else the first rung, $997 (a
-higher rung only when a call or the operator table argues it, and say why in one line).
+Write the `product word` row in `.claude/squad-roots.md`: the noun of THE SENTENCE (`site`, `ads`,
+`program`). Add the row when the table has none. Touch no other row.
 
-Ask for a yes or a different number, never an open question. The yes takes the held number, a
-different number takes that one, anything else leaves it standing.
+Print this, and nothing else of the page:
 
-A number a buyer said on a call (what they pay now, what they were quoted) is a fact, never
-the price.
+```text
+Saved: squad/business.md
+**<THE SENTENCE>**
+<PRICE line 1>
+<N> buyer quotes, from <where>. <K> of <M> sellers publish a price.
+Change any line by telling me what it should say. Next: /the-demo.
+```
 
-PRICE prints the number as a fact, never blank and never marked.
+`<where>` names the sites the quotes came from, in the dig's order: `Reddit`, `Capterra`,
+`Trustpilot`, `the App Store`, `YouTube comments`, a forum's name. `3 buyer quotes, from Reddit and Capterra.`
+With 1 quote the line reads `1 buyer quote, from <where>. <K> of <M> sellers publish a price.`
+No quotes: the quotes line reads `0 buyer quotes in <every source the dig read>. <K> of <M> sellers publish a price.`
+Skipped: `0 buyer quotes, the dig was skipped. <K> of <M> sellers publish a price.`
 
-## The yes
+## Changing a line
 
-Print the file path, then THE SENTENCE, THE PROMISE, the first line of PRICE and the bold line
-of THE ANSWER, as they stand, and nothing else of the document.
+The founder names a line and what it should say: rewrite that line only, under the page law. PRICE
+line 1 stays in 1 of its 3 forms. THE PROMISE never promises a result. A BUYER WORDS line is removed, never reworded.
+A new THE SENTENCE writes the `product word` row again. Print the new line, then
+`Change any line by telling me what it should say. Next: /the-demo.`
 
-Then 2 lines, and stop: read the sentence and the promise out loud and change any word that does
-not sound like you; then the yes (warm run, or "one more call").
+## The wiring
 
-The yes stamps the mode line `confirmed <today's date>`, the only record the gate happened.
+On "Here is my Apify token: ____. Use it for the winning offer.":
 
-A no is an objection with a name: rewrite that one thing from the quotes (cold run, one more
-entry under `## ATTACK LOG`), re-print only the lines it changed, then ask again.
+1. Write `.mcp.json` in the folder Claude Code is open in, from `mcp.json.example` next to this
+   file, with the token in place of `PASTE_YOUR_APIFY_TOKEN`. An existing `.mcp.json` gets the
+   `apify` block added under `mcpServers`, and nothing else in it changes. Use the file tool, never
+   a shell command that prints the token.
+2. The folder is a git repo: add `.mcp.json` to `.gitignore`.
+3. The same message carries the 5 answers: run step 2 and write the page first.
+4. `npx -v` fails: send `Install Node from nodejs.org first (the LTS download).` before the last line.
+5. Send 1 line and stop:
+   `Quit Claude Code, open it again in this folder, choose to use the apify server when it asks, then say hi.`
+   When you wrote the page first (3 above), the line ends `then type /the-winning-offer.` instead.
 
-THE WARRANTY covers what the founder controls, never money the buyer will make.
-
-## The roots
-
-Last, no questions. Fill only the rows THIS run answered, in place, change nothing else. Never
-guess a row.
-
-| Row | Value |
-|---|---|
-| clients | `squad/clients/` (warm, written once) |
-| interviews | `squad/interviews/` (warm, written once) |
-| product word | the one word, off the BRAND line |
-| accent color | the hex from the BRAND line, or `#146ef5 until you pick one` |
-| data sources | `squad/business.md`, plus `squad/offer-research.md` once a cold run wrote it |
-| research mode | `wired` or `unwired ladder`, the cold run's mode; `warm only` when none has run |
-
-Then what to type next: after a yes, `/the-close script`; after a gate-2 kill, `/the-winning-offer`
-again with the new buyer.
+Never print the token back. Never ask the founder to open or edit a file.
 
 ## Never
 
-- Never send, post or book.
-- Never price past the founder's own number. One number, decided by them; a buyer's number is a fact.
-- Never invent a quote, a number, a name or a need. A cost the text does not support is a
-  question; a need nobody said stays out.
-- Never paraphrase a quote, or save a paraphrase as one. Verbatim, labeled, dated. A call's line
-  outranks a scrape's; same claim, 2 sources, the one with a name on it wins.
-- Never a guarantee.
-- Never a menu of options. One answer.
-- Never ask the founder to edit a file or organise their notes. The one thing they do by hand is
-  drop one file per call in `squad/interviews/`, named after the person.
-- Never make the founder re-narrate a call whose words are on disk.
-- Never print the whole document into chat: the path, and the lines the yes needs.
+- Send, post or book anything.
+- Invent a quote, a number, a seller or a need. A line with no answer and no receipt under it stays off the page.
+- Paraphrase a quote.
+- A range, or 2 prices for the same term, anywhere but WHAT HE PAYS NOW and the Price column of the sellers table.
+- A guarantee, or a promise of money the buyer will make.
+- A menu of options. 1 page, 1 offer.
+- Print the whole page into chat, or the token anywhere.
