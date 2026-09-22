@@ -22,7 +22,9 @@ Tools: WebSearch to find sellers, `apify--web-fetch` to read each one's own page
    $0.0015 a page), and read every plan and its price off the row's `markdown`. Only when they are not
    loaded: WebFetch with this prompt. No price on the page and a Pricing or Plans link named: open that
    link the same way. Never guess a URL.
-   `Quote word for word: the name this business sells under, who this is for, what the buyer gets, every plan with its price, term and billing note, any delivery time, every sentence that names the buyer's problem, and the link to the pricing page.`
+   `Quote word for word: the name this business sells under, who this is for, what the buyer gets, every plan with its price, term and billing note, any delivery time, every sentence that names the buyer's problem, and the link to the pricing page. Then the page's headings in order from top to bottom, every deliverable the plan lists, every proof element (a review count, a rating, years, client names, logos, a guarantee), what the plan leaves out, and every question in its FAQ.`
+   With `apify--web-fetch`, the headings are the `#` lines of the `markdown`, in order, nav and footer
+   left out. Keep the whole read of every seller for this run: THE WINNERS is written from it.
    The page comes back with no body text (a title only, as on Gumroad): fetch it once with
    `apify--web-fetch`, `formats` `raw`, and read the plan price and its term from the page's own data
    (`"offers"`, `"price"`, `"recurrence"`). Still no price, or the Apify tools are not loaded: the
@@ -57,6 +59,15 @@ a quote" or no number at all is `not published`. A $0 plan is not a published pr
 4. Answer 1 is "nothing yet" and there is no answer 5: the offer is what most of the sellers to that
    buyer sell.
 
+
+**The winner read.** THE WINNERS on the page holds 3 sellers, read whole on the same fetch as the
+price: the headings in order, every deliverable the plan lists, every proof element, what the plan
+leaves out, the term, and every question in its FAQ. Which 3: sellers with a published price first,
+then the most proof elements, then table order. A seller whose price page and home page differ: the
+price page gives the plan and its deliverables, the home page gives the headings and the proof, so
+both are fetched (about $0.003 for the pair). A page already fetched is never fetched again for the
+same fields. The FAQ questions go to OBJECTIONS. The shape of each block: `references/the-page.md`,
+THE WINNERS.
 
 ## Part 2 · The dig
 

@@ -38,14 +38,38 @@ What I stand behind: <what gets delivered, and the day>
 
 ## WHY THIS ONE
 <1 line: why this idea over the one in answer 5, with the counts; or "the only idea">
+
+## THE WINNERS
+### <Seller> · <Price cell> · [domain](url)
+Sells: <every deliverable the page lists for that plan, in the page's words, joined by " · ">
+Page, top to bottom: <the page's headings in order, joined by " · ">
+Proof: <what the page shows as proof, in its words; or "none shown">
+Terms: <delivery time · what the plan leaves out · month to month or a contract, as printed; or "not printed">
+The problem, in their words: "<the 1 sentence on their page that names the buyer's problem>"
+
+## WHAT HE GETS
+1. <1 thing this offer delivers> (<the winner that sells it, or "2 of 3", or "answer 3">)
+
+## THE BUILD
+1. <step> · <tool> · day <n>
+
+Tools: <tool>, <price a month or "free plan"> (<its pricing page>) · ...
+Cost to deliver 1: $<n> a month in tools, about <n> hours of yours
+
+## OBJECTIONS
+1. "<what he says before he pays>" · <the answer, 1 line, ending on the line of this page it rests on>
 ```
 
 ## The law
 
-- These 10 headings, these strings, this order. No other heading, note, stamp or line.
+- These 14 headings, these strings, this order. No other heading, note, stamp or line. The 4 that
+  follow WHY THIS ONE (THE WINNERS, WHAT HE GETS, THE BUILD, OBJECTIONS) come last so every agent that
+  reads a heading by its line 1 still finds it where it was.
 - Every line traces to an answer or a receipt: a founder's answer, a BUYER WORDS line or a row of the
   sellers table. Nothing invented.
-- 1 page, 1 offer, 1 price. A range only in WHAT HE PAYS NOW and the sellers table, because they report what others charge.
+- 1 offer, 1 price. A range only in WHAT HE PAYS NOW and the sellers table, because they report what others charge.
+- The page is as long as the winners make it. A 10-line offer next to a winner that lists 9 deliverables,
+  a 6-section page and a guarantee is not an offer, it is a note.
 - Numerals, plain words, no em dashes.
 - A heading sits empty only mid-run, where the run picks up. A finished page has no empty heading.
 
@@ -182,3 +206,100 @@ prices first.
   - Answer 1's idea won: `<idea> over <other idea>: 7 sellers with a published price against 2, and <other idea> needed 14.`
   - Answer 5's idea won: `<idea> over <other idea>: 8 sellers with a published price against 3, and it needed 6.` Answer 1's idea had none: `<idea> over <other idea>: 4 sellers with a published price against none.`
   - Answer 5's read stopped at 5: `<idea> over <other idea>: 6 sellers with a published price against 2 of 5 read, and <other idea> needed 12, more than the 10 it could read.`
+
+## THE WINNERS
+
+The 3 sellers a buyer already pays, read whole, so the offer copies what wins instead of guessing at
+it. 1 block each, in this order: sellers with a published price first, then the most proof elements,
+then table order. Every line is read off the seller's own page in part 1 of `references/the-dig.md`
+(The winner read), and there is no second fetch for a page already read.
+
+```
+### ProSites · $299 a month · [prosites.com](https://www.prosites.com/pricing)
+Sells: a 5-page site · online booking · the photos placed · hosting · 1 round of changes a month
+Page, top to bottom: Hero · Who it is for · What you get · Reviews · Pricing · FAQ · Book a call
+Proof: 4.8 stars from 312 reviews · since 2003 · 3 client logos
+Terms: live in 14 days · design changes past 1 round cost extra · month to month
+The problem, in their words: "Patients call the practice that answers."
+```
+
+- `Sells:` is the plan in the Price cell, every deliverable the page lists for it, in the page's words.
+  A home page that lists what every plan gets: that list.
+- `Page, top to bottom:` the headings of the page the price was read on, or the home page when the price
+  page has none, in order, nav and footer left out. This line is what /execution-genesis-demo copies.
+- `Proof:` only what the page shows: a review count, a rating, years, client names, logos, before and
+  afters, a guarantee. Nothing shown: `none shown`.
+- `Terms:` the delivery time, what the plan leaves out, and the term, as printed. Missing: `not printed`.
+- A page that did not load has no block. Fewer than 3 blocks: the first line under the heading reads
+  `<N> of <M> pages loaded.`
+
+## WHAT HE GETS
+
+What this offer delivers, 1 line per thing, 5 to 12 lines, in the order the buyer meets them. Each line
+ends on where it comes from: `(<seller>)` when 1 winner sells it, `(2 of 3)` or `(3 of 3)` when more do,
+`(answer 3)` when the founder named it. A thing 2 or 3 winners sell is always on the list: the buyer
+already expects it. A thing no winner sells and the founder did not name stays off. So the list is
+the winners' lists joined, plus what the founder adds on top.
+
+```
+1. A 1-page site built for the phone, with online booking (3 of 3)
+2. The photos, made and placed (2 of 3)
+3. His Google Business Profile, set up or fixed (ProSites)
+4. 1 round of changes a month (answer 3)
+```
+
+## THE BUILD
+
+How the founder makes WHAT HE GETS, so the promise has a plan under it. 1 line a step, the tool named
+in every step, in the order the work runs, the days adding up to the day in THE PROMISE. Then the tools,
+each with its price read off its own pricing page today, and the cost to deliver 1.
+
+```
+1. Read his site and his listing, write facts.md · Claude Code · day 1
+2. Make the photos · Higgsfield · day 1
+3. Build the page · Claude Code · day 2
+4. His notes, 2 rounds · Claude Code · day 3 to 5
+5. Put it on his domain · Vercel · day 6
+6. Connect the booking · cal.com · day 6
+
+Tools: Claude, the plan you have · Higgsfield, $19 a month (https://higgsfield.ai/pricing) · Vercel, free plan (https://vercel.com/pricing) · cal.com, free plan (https://cal.com/pricing)
+Cost to deliver 1: $19 a month in tools, about 12 hours of yours (2 hours a step)
+```
+
+- Every line of WHAT HE GETS is made by at least 1 step here, and every step makes a line there.
+- The tools come from the table below, by THE SHAPE. A tool the founder named in answer 3 replaces the
+  table's tool for that job. A tool a winner's page says it delivers on (WordPress, Wix, GoHighLevel)
+  is written after the tools line as `What <seller> builds on: <tool>.`, a fact about them, never a
+  step of the founder's.
+- A tool's price is its cheapest paid plan, month to month, or `free plan` when the free plan covers
+  this build, read off the tool's own pricing page with `apify--web-fetch` (or WebFetch when the Apify
+  tools are not loaded) on the day the page is written, with the link. A page that shows no price:
+  `price not shown` and the link. Never a price from memory.
+- The hours: the founder's own count when answer 3 gave one, else 2 hours a step, marked so.
+
+| THE SHAPE | The tools, in the order the build uses them |
+|---|---|
+| website | Claude Code (the page) · Higgsfield (the photos) · a domain registrar (his domain, when he has none) · Vercel (hosting) · cal.com (booking) · Google Business Profile (his listing) |
+| content | Claude Code (the plan and the captions) · Higgsfield (the images and the clips) · Descript or CapCut (the edit) · the platform's own scheduler (Meta Business Suite for Instagram and Facebook, YouTube Studio for YouTube) |
+| consulting program | Notion (the program and the client board) · cal.com (the calls) · Stripe (the payment link) · Google Meet or Zoom (the call itself) |
+| software | Claude Code (the build) · Vercel (hosting) · Supabase (the data) · Stripe (payment) · Twilio (a phone or text line, when THE SENTENCE answers calls or texts) · Resend (the email it sends) |
+
+## OBJECTIONS
+
+The 5 things he says before he pays, and the answer to each, off this page. 1 line each: his words in
+quote marks, then ` · `, then the answer, ending on the line of this page it rests on.
+
+```
+1. "I already have a site." · His site is not the problem, his phone is: "we miss half the calls after 5" · BUYER WORDS 2
+2. "How long does it take?" · Live by day 14 after he pays · THE PROMISE
+3. "What if I don't like it?" · 2 rounds of changes are in it · WHAT HE GETS 4
+4. "That's a lot." · Sellers charge $199 to $500 setup at 3 of 10, and this is $2,500 one-time · WHAT HE PAYS NOW
+5. "Who else have you done this for?" · He sees his own demo working before he pays · THE SHAPE
+```
+
+Where each objection comes from, in this order until there are 5: a BUYER WORDS line that doubts or
+hesitates ("tried one before", "too expensive", "no time for this"), a question in a winner's FAQ (the
+winner read), then the 5 above as the standing set, filled off this page. An answer is 1 line and never
+promises money, a result or a guarantee. An answer that would need a fact this page does not hold (a
+client, a count of sites built) points at the demo instead. /execution-genesis-close reads these
+lines into the call.
