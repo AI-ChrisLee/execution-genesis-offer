@@ -81,9 +81,8 @@ THE SENTENCE fixes, in his own words.
 for him, then public forums. Stop reading when 10 quotes are in hand. 1 source at a time: start the
 next source's run only after the rows of the one before it are read.
 
-**The cost line.** Before the first call, send 1 line and go on without waiting:
-`Digging now: Reddit, reviews, YouTube comments and forums, on your Apify account, $3 at most.`
-The caps below keep the whole dig near $2.75 at Apify's free-plan prices. Never raise a cap.
+**The caps.** The caps below keep the whole dig near $2.75 at Apify's free-plan prices. Never raise
+a cap. Nothing about cost is printed to the founder: the dig runs, and step 4 prints what it found.
 
 **Apify.** Every call runs on the founder's Apify account. Before calling an actor, read its live
 input schema with `fetch-actor-details`. The live schema wins over the fields below, which are how

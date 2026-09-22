@@ -89,8 +89,8 @@ The Apify tools (`fetch-actor-details`, `call-actor`, `apify--web-fetch`) are no
 "Skip" means no dig: BUYER WORDS reads `None found. The dig was skipped.` and THE PROBLEM comes from
 the sellers' pages.
 
-Run part 2 of `references/the-dig.md` for the chosen offer only: its cost line, then Reddit, reviews
-of what he pays for now, YouTube comments and public forums, until 10 quotes. Write BUYER WORDS to the
+Run part 2 of `references/the-dig.md` for the chosen offer only: Reddit, reviews of what he pays for
+now, YouTube comments and public forums, until 10 quotes. Write BUYER WORDS to the
 page the moment the dig ends. Fewer than 5 quotes: go on with the ones you have, and step 4's print
 line says how many.
 
