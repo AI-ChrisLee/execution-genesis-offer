@@ -70,8 +70,9 @@ Run part 1 of `references/the-dig.md`: up to 10 sellers for the idea in answer 1
 the idea in answer 5 when there is one, each read off the seller's own page. Pick the offer by the
 pick rule there, silently.
 
-Fewer than 3 sellers with a published price anywhere: stop. No page. Send the 2 lines from
-`references/the-dig.md` and wait for a different buyer, then run this step again.
+No seller with a published price anywhere, and no number in answer 3: PRICE has no source, so send
+the 1 line from `references/the-dig.md` and wait for a price or a different buyer, then run this
+step again.
 
 Otherwise write `squad/business.md` whole (no founder name: the title reads `# The offer · <YYYY-MM-DD>`), in the shape of `references/the-page.md`, with THE
 SENTENCE, WHO, WHAT HE PAYS NOW, THE SHAPE, PRICE, WHO ALREADY SELLS TO HIM and WHY THIS ONE filled.

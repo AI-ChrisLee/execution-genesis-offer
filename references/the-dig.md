@@ -44,13 +44,14 @@ a quote" or no number at all is `not published`. A $0 plan is not a published pr
 
 **The pick,** silent. Count the sellers with a published price for each idea.
 
-1. Fewer than 3 across every idea read: stop. No page. Send these 2 lines and wait for a different buyer.
+1. None across every idea read, and no number in answer 3: PRICE has no source. Send this 1 line and
+   wait for a price or a different buyer.
    ```text
-   I looked for people selling <idea> to <buyer> in <N> searches and on <M> sellers' own pages, and <K> of them publish a price.
-   When nobody charges a buyer for this, he usually does not pay for it. Who else could buy it?
+   I looked for people selling <idea> to <buyer> in <N> searches and on <M> sellers' own pages, and none of them publish a price. Tell me your price, or who else could buy it.
    ```
-2. Answer 1's idea has sellers with a published price: the offer is answer 1's idea. Answer 5's idea
-   wins only with at least 2 times as many, and WHY THIS ONE gives both counts.
+2. Answer 1's idea has sellers with a published price, or answer 3 gives a number: the offer is
+   answer 1's idea. Answer 5's idea wins only with at least 2 times as many, and WHY THIS ONE gives
+   both counts.
 3. Answer 1's idea has none and answer 5's has some, or answer 1 is "nothing yet" and there is an
    answer 5: the offer is answer 5's idea.
 4. Answer 1 is "nothing yet" and there is no answer 5: the offer is what most of the sellers to that
